@@ -30,13 +30,12 @@ textarea,
   font-family: inherit;
   font-weight: inherit;
   line-height: inherit;
-  text-box: trim-both cap alphabetic;
-  text-box-edge: cap alphabetic;
 }
 
 h1 {
-  line-height: 2cap;
+  line-height: 1.1;
   font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
 label,
@@ -48,13 +47,9 @@ label {
   font-weight: 600;
 }
 
-h1,
-textarea {
-  margin-bottom: 1.5rem;
-}
-
 textarea {
   padding: 0.5em;
+  margin-bottom: 0.5rem;
   display: block;
   direction: rtl;
   resize: vertical;
