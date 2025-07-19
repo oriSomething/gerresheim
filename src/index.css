@@ -1,0 +1,119 @@
+/* hebrew */
+@font-face {
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url(./assets/fonts/FrankRuhlLibre-VariableFont_wght.ttf) format("woff2");
+}
+
+html {
+  direction: rtl;
+  font-family: "Frank Ruhl Libre", serif;
+  line-height: 1.5;
+  color: #444;
+  background: white;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+label,
+button,
+textarea,
+.result-label-container {
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-box: trim-both cap alphabetic;
+  text-box-edge: cap alphabetic;
+}
+
+h1 {
+  line-height: 2cap;
+  font-weight: 500;
+}
+
+label,
+textarea {
+  font-size: 120%;
+}
+
+label {
+  font-weight: 600;
+}
+
+h1,
+textarea {
+  margin-bottom: 1.5rem;
+}
+
+textarea {
+  padding: 0.5em;
+  display: block;
+  direction: rtl;
+  resize: vertical;
+  border: solid thin;
+  border-radius: 4px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.app {
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.result-container {
+  flex-direction: column;
+  position: relative;
+  display: flex;
+}
+
+#copy {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  inset-inline-end: 5px;
+  inset-block-start: 5px;
+  line-height: 1;
+
+  display: inline-flex;
+  position: absolute;
+  gap: 0.5em;
+
+  background: white;
+  border: solid thin;
+  border-radius: 3px;
+  vertical-align: middle;
+
+  &:active {
+    inset-block-start: 6px;
+  }
+
+  & > img {
+    margin: auto;
+  }
+}
