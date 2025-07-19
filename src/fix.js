@@ -136,13 +136,19 @@ export function fix(text) {
 
       // English after no letter
       if (!LETTER_RE.test(chars[i - 1]) && LETTER_RE.test(chars[i + 1])) {
-        result += REPLACE_HEB_CHAR_START.get(char);
+        result +=
+          paragraphLanguage === PARAGRAPH_LANGUAGE_HEB
+            ? REPLACE_NON_HEB_CHAR.get(char)
+            : REPLACE_HEB_CHAR_START.get(char);
         continue;
       }
 
       // English letter and next character isn't letter
       if (LETTER_RE.test(chars[i - 1]) && !LETTER_RE.test(chars[i + 1])) {
-        result += REPLACE_HEB_CHAR_END.get(char);
+        result +=
+          paragraphLanguage === PARAGRAPH_LANGUAGE_HEB
+            ? REPLACE_NON_HEB_CHAR.get(char)
+            : REPLACE_HEB_CHAR_END.get(char);
         continue;
       }
     }
